@@ -1,0 +1,36 @@
+<!DOCTYPE html>                                                                 <!--Define que o tipo de documento a ser trabalho é HTML-->
+<html lang="pt-br">                                                             <!--Marca o início da página html-->
+<head>                                                                          <!--Abre área da cabeça da página, onde é definida toda a formatação dela-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro Programa</title>                                        <!--Local do título da página que é exibido na tab-->
+    <style>                                                 /*Abre área css para fazer o design da página*/
+        body {                                              /*Abre área de design no body do html/página*/
+            background-color: rgb(255, 251, 0);           /*Faz o background da pag mudar de cor*/
+            color: white;                                 /*Muda a cor das letras*/
+            font: normal 20pt arial;                        /*Muda a fonte, tamanho e tipo das letras*/
+        }
+        h1{                                                 /*Abre área de design para alterar o título da página*/
+            color: rgb(161, 91, 91);                      /*Muda a cor do título*/
+        }
+    </style>                                                    <!--Marca o encerramento da área de design css-->
+</head>                                                         <!--Marca o fim da área da cabeça da página-->
+<body>                                                          <!--Abre área do corpo da página, onde serão colocados os conteúdos-->
+    <h1>Olá, Mundo!</h1>                                        <!--Define Essa frase como título da página-->                         
+    <h3><p>Já me livrei da maldição</p></h3>                    <!--Faz essa frase ficar em um parábrafo diferente-->
+    <script>                                                                            //Abre área do JS para programar interações na página
+        /*var n1 = Number.parseInt(window.prompt('Digite um número inteiro: '))           //Recebe string da janela de interação e converte para número inteiro
+        var n2 = window.prompt('Digite outro número inteiro: ')                         //Apenas recebe string
+        var s1 = n1 + Number.parseInt(n2)                                               //Faz a soma das variáveis n1 e n2 enquanto converte a string n2 para número inteiro
+        window.alert('A soma dos valaores é: ' + s1)                                    //Exibe resultado da soma em janela de alerta usando concatenação
+        var n3 = Number.parseFloat(window.prompt('Digite um número real: '))            //Cria janela de interação que recebe string e converte para número real
+        var n4 = Number.parseFloat(window.prompt('Digite outro número real: '))         //Cria janela de interação que recebe string e converte para número real
+        var s2 = n3 + n4                                                                //Faz a soma das variáveis n3 e n4
+        window.alert('A soma dos valores é: ' + s2)                                     //Exibe resultado da soma em uma janela de alerta */
+        var n5 = Number(window.prompt('Digite qulquer tipo de número: '))                       //Cria janela de interação que rebebe string e converte para automaticamente para número inteiro ou real
+        var n6 = Number(window.prompt('Digite outro número de qulquer tipo:'))          //Cria janela de interação que rebebe string e converte para automaticamente para número inteiro ou real
+        var s3 = n5 + n6                                                                //Faz a soma dos valores das variáveis n5 e n6
+        window.alert(`A soma entre ${n5} e ${n6} é igual a ${s3}`)                                     //Exibe o resultado da soma em uma janela de alerta usando templateString com place holders (${}). Esse tipo de formatação tem que estar sempre entre crases
+    </script>
+</body>                                                           <!--Marca o fim da área do corpo da página-->
+</html>                                                           <!--Marca o fim da página html-->

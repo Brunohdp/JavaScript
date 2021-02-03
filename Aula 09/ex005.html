@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">                             <!--Colocar pt-BR diz que o site está em português-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body{
+            background-color:rgb(68, 125,199);
+            color:white;
+            font: normal 17pt times;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Iniciando estudos com DOM</center></h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendom a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]                            //Cria uma variável que vai receber o elemento p. O [0] é para indicar que é o primeiro p, já que existem 2. Se quisesse o segundo, usaria [1]...
+        window.document.write('<p>Está escrito assim: ' + p1.innerText + '</p>')            //Manda escrever no documento o que está escrito no parágrafo 2, porém, sem a formatação strong
+        /*
+        document.write(p1.innerHTML)                                                        //Manda escrever no documento o que está escrito no p1 com a formatação em html.
+        var d = window.document.getElementById('msg')                                       //Joga o elemento msg, identificado por um ID no HTML, dentro da variável "d"
+        d.style.background = 'green';                                                       //Deixa a linha de fundo do texto cujo a variável está ligada, na cor desejada. Como se fosse um marca texto.
+        d.innerText = 'Vish kk'                                                             //Altera o texto html inicial da div no texto entre aspas (Comando simplificado)
+        window.document.getElementById('msg').innerText = 'vish kk2'                        //Faz o mesmo que o de cima, mas esse é o comando completo, sem criar variáveis etc.
+        var d = window.document.getElementsByName('msg')[0]                                 //Seleciona o elemento pelo nome. Funciona da mesma maneira que o ID
+        d.innerText = 'Olá!'
+        */
+        var d = window.document.querySelector('div.msg')                                     //Seleciona o item por selector dizendo que o texto está dentro do div com id msg. Toda div/ID é representada por uma # e toda classe por um ponto
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
