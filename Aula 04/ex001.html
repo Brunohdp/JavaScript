@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu primeiro Programa</title>
     <style>
+        main{
+            background-color: white;
+            padding: 10px;
+        }
         body {
-            background-color: rgb(174, 0, 255);
-            color: white;
-            font: normal 20pt arial;
+            background-image: linear-gradient(to left, rgb(157, 0, 220), rgb(204, 95, 255));
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2em;
+            text-align: justify, left;
         }
         h1{
-            color: rgb(94, 27, 27);
+            color: rgb(255, 238, 0);
+            text-shadow: 3px 3px 5px rgb(94, 88, 0);
+            text-align: center;
+            font-size: 2em;
+            font-family: 'Times New Roman', Times, serif;
         }
     </style>
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>                                
-    <h3><p>Já me livrei da maldição</p></h3>
-    <script>
-        window.alert("Minha primeira mensagem!");       //abre janela de alerta
-        window.confirm("Está gostando de JS?")          //Abre janela de confirmação. Botão ok e cancelar
-        window.prompt("Qual é seu nome?")               //Abre janela para escrever
-    </script>
+    <main>
+        <h1>Olá, Mundo!</h1>
+        <p>Já me livrei da maldição</p>
+        <script>
+            window.alert("Minha primeira mensagem!");       //abre janela de alerta
+            window.confirm("Está gostando de JS?")          //Abre janela de confirmação. Botão ok e cancelar
+            window.prompt("Qual é seu nome?")               //Abre janela para escrever
+        </script>
+    </main>
 </body>
 </html>
