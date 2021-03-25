@@ -43,7 +43,9 @@
     </main>
     <script>
         var nome = window.prompt('Qual seu nome, meu anjo?');
-        document.write(`Muito bem vindo ${nome}. Seu nome possui ${nome.length} letras!`);
+        document.writeln(`<main>Muito bem vindo ${nome}! Seu nome possui ${nome.length} letras!</main>`);
+        document.writeln(`<main>Seu nome em maiúsculas é ${nome.toUpperCase()}!</main>`)
+        document.writeln(`<main>Seu nome em minúsculas é ${nome.toLowerCase()}!</main>`)
     </script>
 </body>
 </html>
