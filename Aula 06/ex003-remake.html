@@ -36,14 +36,17 @@
 </head>
 <body>
     <main>
-        <h1>Remake do Ex 002</h1>
-        <p>Refazendo Ex 002. Sim, estou refazendo todos eles pra reaprender. Não me julgue, eu mesmo...</p>
+        <h1>Remake do Ex 003</h1>
+        <p>Refazendo Ex 003. Sim, estou refazendo todos eles pra reaprender. Não me julgue, eu mesmo...</p>
         <h2>Variáveis</h2>
         <p>Nesse exercícios vamos falar de variáveis, como criá-las e guardar dados nelas a partir do JavaScript</p>
     </main>
     <script>
-        var nome = window.prompt('Qual seu nome, meu anjo?');       //Pergunta e armazena o nome no cliente
-        window.alert('É um grande prazer te conhecer, ' + nome + '!');     //exibe o nome colocado em janela de alerta
+        window.alert('Vamos somar números!');
+        var n1 = Number(window.prompt('Digite o primeiro número:'));
+        var n2 = Number(window.prompt('Digite o segundo número:'));
+        var soma = n1 + n2
+        window.confirm(`A soma dos números ${n1} e ${n2} é igual a: ${soma}. Correto?`);
     </script>
 </body>
 </html>
