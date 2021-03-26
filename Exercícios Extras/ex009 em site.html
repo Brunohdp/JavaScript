@@ -22,25 +22,26 @@
         }
     </style>
 </head>
-<body>
-    <h1><strong>Registro de País</strong></h1>
-    Digite seu País:</br>   
-    <input type="text" name="país" id="país">
-    <input type="button" value="Registrar" onclick="incluir()">
-    <div id="res">     </div>
-
-    <script>
-        function incluir() {
-            var país = window.document.getElementById("país")
-            var res = window.document.querySelector('div#res')
-            var kk = String(país.value)
-            res.innerHTML = `<p>Vivendo em <strong>${kk}</strong></p>`
-            if (kk == 'Brasil') {
-                res.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
-            } else {
-                res.innerHTML += '<p>Você é <strong>Extrangeiro!</strong></p>'
-            }          
-        }
-    </script>
+<body style="color: black;">
+    <main style="background-color: white; padding: 7px; color: black">
+        <h1><strong>Registro de País</strong></h1>
+        Digite seu País:</br>
+        <input type="text" name="país" id="país">
+        <input type="button" value="Registrar" onclick="incluir()">
+        <div id="res">     </div>
+        <script>
+            function incluir() {
+                var país = window.document.getElementById("país")
+                var res = window.document.querySelector('div#res')
+                var kk = String(país.value)
+                res.innerHTML = `<p>Vivendo em <strong></strong></p>`
+                if (kk == 'Brasil') {
+                    res.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
+                } else {
+                    res.innerHTML += '<p>Você é <strong>Extrangeiro!</strong></p>'
+                }
+            }
+        </script>
+    </main>
 </body>
 </html>
