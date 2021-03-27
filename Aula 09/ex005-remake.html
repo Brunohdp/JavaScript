@@ -17,7 +17,7 @@
             text-align: justify;
             font-size: 1em;
             font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
+            font-weight: 100;
             color: black;
         }
         h1{
@@ -43,8 +43,19 @@
         <h1>Trabalhando Com DOM</h1>
         <p>Exercício Remake</p>
         <h2>Aqui Vai o Resultado</h2>
-        <p>Aprendendo a Usar o DOM no JavaScript!</p>
-        <div>Clique em mim</div>
-    </main>
+        <p>Aprendendo a Usar o <strong>DOM</strong> no JavaScript!</p>
+        <div id="msg">Clique em mim</div>       <!--id na div está dando um nome específico somente para essa div, desse modo, fica bem mais fácil selecionar somente ela quando estiver fazendo qualquer coisa num script e não quer alterar as outras divs.-->
+        <script>
+            var p1 = window.document.getElementsByTagName('p')[1];   //Variável p1 recebe o que está escrito na primeira tag <p> do documento. O que indica que é a primeira tag p é o [0] no final, e nós só podemos pegar esse texto pois estamos utilizando o getElementsByTagName, ou seja, vai pegar o que está escrito do elemento que possui a tagname ('p'). Se dentro de [] estivesse outro número, ele iria pegar o do númro respectivo - 1, ou seja, se eu tiver 10 tags <p> no ducmento e quiser selecionar a oitava, eu preciso colocar o número [7], já que a primeira é o zero.
+        window.document.writeln('1. <strong><u>Está escrito assim</u> (sem formatação, apenas o texto):</strong> ' + p1.innerText + '<br>');       //Essa linha basicamente manda escrever na tela/copiar o que está escrito no primeiro parágrafo contido agr tbm na variável p1, através do comando innerText.
+        window.document.writeln('2. <strong><u>Está escrito assim</u> (formatado):</strong> ' + p1.innerHTML + '<br>');
+        p1.style.color = 'blue'         //Altera a cor do primeiro parágrafo (determinado pela variável p1, lá no começo) para azul utilizando DOM. Dá para alterar qualquer coisa utilizando esses comandos no console de um site.
+        var d = window.document.getElementById('msg');
+        document.write('<strong>Essa é a mensagem: </strong>' + d.innerHTML)
+        d.style.backgroundColor = 'green'
+        var v = window.document.querySelector('div#msg')
+        v.style.color = 'white'
+    </script>
+</main>
 </body>
 </html>
