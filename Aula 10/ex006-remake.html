@@ -48,9 +48,29 @@
         <p>
             Segundo exercício utilizando <strong>DOM</strong>
         </p>
-        <div id="area">
+        <div id="area" onclick="clicar()" onmouseout="sair()" onmouseenter="entrar()" onmousedown="apertar()" onmouseup="soltar()">
             Interaja...
         </div>
     </main>
+    <script>
+        var a = window.document.getElementById('area')
+        
+        function clicar() {
+            a.innerText = 'Clicou!'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+        }
+        function apertar(){
+            a.innerText = 'Apertando!'
+            a.style.backgroundColor = 'red'
+        }
+        function soltar(){
+            a.style.backgroundColor = '#4EEF3D'
+        }
+    </script>
 </body>
 </html>
