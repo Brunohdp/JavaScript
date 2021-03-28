@@ -34,6 +34,17 @@
             font-size: 2em;
             font-family: 'Times New Roman', Times, serif;
         }
+        div#res{
+            background-color: #DAF05C;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        input{
+            width: 100px;
+        }
+        input#bto{
+            width: 60px;
+        }
     </style>
 </head>
 <body>
@@ -44,8 +55,18 @@
         <p>Vamos somar valores utilizando inputs e botões a partir do HTML5 e utilizar o JavaScript para fazer a soma e nos retornar o valor!</p>
         <p>Digite dois números nas caixar abaixo:</p>
         <input type="number" name="txtn1" id="txtn1"> +
-        <input type="number" name="" id="">
-        <input type="button" value="Somar" onclick="somar()">
+        <input type="number" name="" id="txtn2">
+        <input id="bto" type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado: </div>
     </main>
+    <script>
+        function somar() {
+            var n1 = window.document.getElementById('txtn1')
+            var n2 = window.document.querySelector('input#txtn2')
+            var s = Number(n1.value) + Number(n2.value)
+            var r = window.document.querySelector('div#res')
+            r.innerHTML = `A soma dos valores "<u>${n1.value}</u>" e "<u>${n2.value}</u>" é igual a: <strong><u>${s}</u></strong>!`
+        }
+    </script>
 </body>
 </html>
