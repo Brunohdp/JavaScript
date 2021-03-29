@@ -34,6 +34,11 @@
             text-shadow: 1.5px 1px 2px #010616;
             color: #1C46D2;
         }
+        div{
+            background-color: #8910D1;
+            padding: 10px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -44,17 +49,23 @@
         <p>
             Velocidade do carro: <input type="number" name="vel" id="txtvel"> Km/h
             <input type="button" value="Verificar" onclick="calcular()">
+            <div id="res"></div>
+            <div id="res1"></div>
         </p>
         <script>
-            var vel = window.document.getElementById('txtvel');
-            document.write(`Sua velocidade é de ${vel.value}Km/h`)
             function calcular() {
+                var txtv = window.document.querySelector('input#txtvel');
+                var vel = Number(txtv.value)
+                var res = document.querySelector('div#res')
+                var res1 = document.querySelector('div#res1')
+
+                res.innerHTML = `Sua velocidade é de ${vel}Km/h`
                 if (vel > 60) {
-                    window.document.write('Sua velocidade ultrapassou o limite de 60 Km/h')
-                    window.document.write('VOCÊ FOI MULTADO!')
+                    res1.innerHTML = 'Você ultrapassou o limite de 60 Km/h. <br><strong>VOCÊ FOI MULTADO!</strong>'
+                    
                 }
                 else {
-                    window.document.write('Boa Viagem!')
+                    res1.innerHTML = 'Boa Viagem!'
                 }
             }
         </script>
