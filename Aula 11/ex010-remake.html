@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Detran</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #2EDB79, #00BA51, #008E3E);
+            font-size: 1em;
+            font-family: sans-serif;
+            text-align: justify;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            box-shadow: 5px 5px 20px black;
+        }
+        h1{
+            font-size: 3em;
+            font-family: serif;
+            text-align: center;
+            text-decoration: underline;
+            text-shadow: 2px 2px 3px #010616;
+            color: #1C46D2;
+        }
+        h2{
+            font-size: 2em;
+            font-family: serif;
+            text-align: center;
+            text-decoration: underline;
+            text-shadow: 1.5px 1px 2px #010616;
+            color: #1C46D2;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Detran</h1>
+        <p>Fazendo o remake do exercício 10 sobre interatividade com condições em sites.</p>
+        <h2>Sistema de Multas</h2>
+        <p>
+            Velocidade do carro: <input type="number" name="vel" id="txtvel"> Km/h
+            <input type="button" value="Verificar" onclick="calcular()">
+        </p>
+        <script>
+            var vel = window.document.getElementById('txtvel');
+            document.write(`Sua velocidade é de ${vel.value}Km/h`)
+            function calcular() {
+                if (vel > 60) {
+                    window.document.write('Sua velocidade ultrapassou o limite de 60 Km/h')
+                    window.document.write('VOCÊ FOI MULTADO!')
+                }
+                else {
+                    window.document.write('Boa Viagem!')
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>
