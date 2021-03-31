@@ -1,11 +1,12 @@
 body{
-    background-color: #C7B68A;
-    text-align: center;
+    background-color: #3D78D5;
+    text-align: justify;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
 }
 header{
     color: white;
+    text-align: center;
 }
 section{
     background-color: white;
@@ -15,7 +16,11 @@ section{
     width: 500px;
     margin: auto;
 }
+div.conteudo{
+    padding: 7px;
+}
 footer{
     color: white;
     font-style: italic;
+    text-align: center;
 }

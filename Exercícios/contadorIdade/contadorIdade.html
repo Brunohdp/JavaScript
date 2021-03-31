@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <title>Título</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <title>Contador de Idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
-            <div>
-                Testando...
+            <div id="ano">
+                <p>Ano de nascimento: <input type="number" name="ano" id="an"></p>
             </div>
             
-            <div>
-                Olá!
+            <div id="sexo">
+                <p>
+                    sexo: <input type="radio" name="masculino" id="m">Masculino
+                    <input type="radio" name="feminino" id="f"> Feminino
+                    <input type="radio" name="oculto" id="o"> Não falar
+                </p>
+            </div>
+
+            <div id="bto">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+            
+            <div id="conteudo">
+                <p id="msg">oi</p>
+                <img src="" alt="" id="img">
             </div>
     </section>
     <footer>
